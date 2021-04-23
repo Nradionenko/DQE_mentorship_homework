@@ -1,0 +1,23 @@
+{
+    "created": 1618167833.6261804,
+    "duration": 0.08880162239074707,
+    "exitcode": 0,
+    "root": "C:\\Users\\Nadiia_Radionenko\\PycharmProjects\\DQE_homework",
+    "summary": {
+        "passed": 2,
+        "total": 2,
+        "collected": 2
+    },
+    "tests": [
+        {
+            "nodeid": "tests/test_completeness.py::test_completeness",
+            "lineno": 15,
+            "outcome": "passed"
+        },
+        {
+            "nodeid": "tests/test_consistency.py::test_consistency",
+            "lineno": 14,
+            "outcome": "passed"
+        }
+    ]
+}
