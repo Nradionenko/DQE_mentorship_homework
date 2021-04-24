@@ -15,7 +15,7 @@ pytest_args = [tests_folder,
                "--disable-pytest-warnings",
                "-vv",
                "--json-report",
-               f"--json-report-file={results_path}",
+               "--json-report-file={}".format(results_path),
                "--json-report-indent=4"]
 
 pytest.main(pytest_args)
