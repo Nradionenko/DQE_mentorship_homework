@@ -54,7 +54,7 @@ class DB_CONNECT:
 
 d = DB_CONNECT()
 curs = d.connect()
-curs.execute('select * from trn.regions')
+curs.execute('select * from hr.regions')
 result = curs.fetchall()
 for i in result:
     print(i)
