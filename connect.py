@@ -17,7 +17,7 @@ class DB_CONNECT:
 #             server_name = cnf.get_val("DB", "server")
 #             db_name = cnf.get_val("DB", "db_name")
             with pyodbc.connect('Driver={%s};' % (drver)
-                                  'Server={EPUALVIW001F\SQLEXPRESS};'
+                                  'Server={EPUALVIW001F\\SQLEXPRESS};'
                                   'Database={TRN};'
                                   'Trusted_Connection=yes;') as conn:
                 curs = conn.cursor()
