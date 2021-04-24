@@ -9,6 +9,10 @@ pipeline {
     stage("test") {
       steps {
         echo 'testing the application'
+            withPythonEnv('python3') {
+              sh 'pip install pytest'
+              sh 'pytest main.py'
+    }
       }
     }
     stage("deploy") {
