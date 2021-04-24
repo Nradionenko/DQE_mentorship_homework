@@ -2,7 +2,7 @@ import pyodbc
 from os.path import dirname, join, normcase
 
 # from exec_utils.configloader import Config
-from results.logging import Log
+# from results.logging import Log
 
 # cnf = Config()
 # log = Log()
@@ -12,8 +12,8 @@ class DB_CONNECT:
     @staticmethod
     def connect():
         try:
-            server_name = cnf.get_val("DB", "server")
-            db_name = cnf.get_val("DB", "db_name")
+#             server_name = cnf.get_val("DB", "server")
+#             db_name = cnf.get_val("DB", "db_name")
             with pyodbc.connect('Driver={SQL Server};'
                                   'Server={EPUALVIW001F\SQLEXPRESS};'
                                   'Database={TRN};'
