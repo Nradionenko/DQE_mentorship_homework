@@ -15,8 +15,8 @@ class DB_CONNECT:
             server_name = cnf.get_val("DB", "server")
             db_name = cnf.get_val("DB", "db_name")
             with pyodbc.connect('Driver={SQL Server};'
-                                  f'Server={server_name};'
-                                  f'Database={db_name};'
+                                  'Server={};'.format(server_name)
+                                  'Database={};'.format(db_name)
                                   'Trusted_Connection=no;') as conn:
                 curs = conn.cursor()
             log.connected(server_name, db_name)
