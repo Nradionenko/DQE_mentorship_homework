@@ -8,7 +8,7 @@ from os.path import dirname, join, normcase
 # log = Log()
 
 drivers = [item for item in pyodbc.drivers()]
-driver = drivers[-1]
+drver = drivers[-1]
 
 class DB_CONNECT:
     @staticmethod
@@ -16,7 +16,7 @@ class DB_CONNECT:
         try:
 #             server_name = cnf.get_val("DB", "server")
 #             db_name = cnf.get_val("DB", "db_name")
-            with pyodbc.connect('Driver={{}};'.format(driver)
+            with pyodbc.connect('Driver={%s};' % (drver)
                                   'Server={EPUALVIW001F\SQLEXPRESS};'
                                   'Database={TRN};'
                                   'Trusted_Connection=yes;') as conn:
