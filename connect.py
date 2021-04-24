@@ -40,6 +40,8 @@ class DB_CONNECT:
             query = self.read_query(query_file)
             curs.execute(query)
             result = curs.fetchall()[0][0]
+            for i in result:
+                print(i)
             log.query_finish(query_file)
             curs.close()
             return result
@@ -49,6 +51,6 @@ class DB_CONNECT:
             log.log_error(p)
 
 
-# d = DB_CONNECT()
-# d.connect()
-# d.run_query(cnf.get_val("QUERIES", 'query_01'))
+d = DB_CONNECT()
+d.connect()
+d.run_query(cnf.get_val("QUERIES", 'query_01'))
