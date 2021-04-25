@@ -15,7 +15,7 @@ class DB_CONNECT:
         try:
 #             server_name = cnf.get_val("DB", "server")
 #             db_name = cnf.get_val("DB", "db_name")
-            with pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost,1433;DATABASE=TRN;UID=test;PWD=test;') as conn:
+            with pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=127.0.0.1,1433;DATABASE=TRN;UID=test;PWD=test;') as conn:
                 curs = conn.cursor()
 #             log.connected(server_name, db_name)
             return curs
