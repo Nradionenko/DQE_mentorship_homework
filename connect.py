@@ -13,7 +13,7 @@ class DB_CONNECT:
     @staticmethod
     def connect():
         try:
-            with pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=EPUALVIW001F\\SQLEXPRESS;DATABASE=TRN;Trusted_Connection=yes;') as conn:
+            with pyodbc.connect('DRIVER={ODBC Driver 13 for SQL Server};SERVER=EPUALVIW001F\\SQLEXPRESS;DATABASE=TRN;Trusted_Connection=yes;') as conn:
                 curs = conn.cursor()
 #             log.connected(server_name, db_name)
             return curs
