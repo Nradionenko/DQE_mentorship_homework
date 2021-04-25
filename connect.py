@@ -13,10 +13,7 @@ class DB_CONNECT:
     @staticmethod
     def connect():
         try:
-#             server_name = cnf.get_val("DB", "server")
-#             db_name = cnf.get_val("DB", "db_name")
-#             with pyodbc.connect('DRIVER={FreeTDS};SERVER=EPUALVIW001F\SQLEXPRESS;PORT=1433;CHARSET=UTF8;TDS_Version=4.2;DATABASE=TRN;UID=test;PWD=test;') as conn:
-            with pyodbc.connect('DRIVER={SQL Server};SERVER=EPUALVIW001F\\SQLEXPRESS;DATABASE=TRN;Trusted_Connection=yes;'
+            with pyodbc.connect('DRIVER={SQL Server};SERVER=EPUALVIW001F\\SQLEXPRESS;DATABASE=TRN;Trusted_Connection=yes;') as conn:
                 curs = conn.cursor()
 #             log.connected(server_name, db_name)
             return curs
