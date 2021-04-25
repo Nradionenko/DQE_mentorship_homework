@@ -15,7 +15,7 @@ class DB_CONNECT:
         try:
 #             server_name = cnf.get_val("DB", "server")
 #             db_name = cnf.get_val("DB", "db_name")
-            with pyodbc.connect('DRIVER={/usr/lib/x86_64-linux-gnu/odbc/libtdsodbc.so};SERVER={EPUALVIW001F\SQLEXPRESS};PORT=1433;DATABASE={TRN};Trusted_Connection=yes;TDS_VERSION=7.2;') as conn:
+            with pyodbc.connect('DRIVER={/usr/lib/x86_64-linux-gnu/odbc/libtdsodbc.so};SERVER={EPUALVIW001F\SQLEXPRESS};PORT=1433;DATABASE={TRN};Trusted_Connection=yes;TDS_VERSION=8;') as conn:
                 curs = conn.cursor()
 #             log.connected(server_name, db_name)
             return curs
