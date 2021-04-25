@@ -15,7 +15,7 @@ class DB_CONNECT:
         try:
 #             server_name = cnf.get_val("DB", "server")
 #             db_name = cnf.get_val("DB", "db_name")
-            with pyodbc.connect('DRIVER={FreeTDS};SERVER=EPUALVIW001F\SQLEXPRESS;PORT=1433;CHARSET=UTF8;TDS_Version=8.0;DATABASE=TRN;UID=test;PWD=test;') as conn:
+            with pyodbc.connect('DRIVER={FreeTDS};SERVER=EPUALVIW001F\SQLEXPRESS;PORT=1433;CHARSET=UTF8;TDS_Version=8.0;DATABASE=TRN;UID=domain\\test;PWD=test;') as conn:
                 curs = conn.cursor()
 #             log.connected(server_name, db_name)
             return curs
