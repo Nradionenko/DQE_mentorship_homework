@@ -7,8 +7,7 @@ from os.path import dirname, join, normcase
 # cnf = Config()
 # log = Log()
 
-drivers = [item for item in pyodbc.drivers()]
-drver = drivers[-1]
+driver = '/opt/local/lib/libtdsodbc.so'
 
 class DB_CONNECT:
     @staticmethod
@@ -16,7 +15,7 @@ class DB_CONNECT:
         try:
 #             server_name = cnf.get_val("DB", "server")
 #             db_name = cnf.get_val("DB", "db_name")
-            with pyodbc.connect('DRIVER={FreeTDS};SERVER={EPUALVIW001F\SQLEXPRESS};PORT=1433;DATABASE={TRN};Trusted_Connection=yes;TDS_VERSION=8.0;') as conn:
+            with pyodbc.connect(f'DRIVER={driver};SERVER={EPUALVIW001F\SQLEXPRESS};PORT=1433;DATABASE={TRN};Trusted_Connection=yes;TDS_VERSION=8.0') as conn:
                 curs = conn.cursor()
 #             log.connected(server_name, db_name)
             return curs
