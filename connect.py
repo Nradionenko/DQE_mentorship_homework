@@ -13,7 +13,7 @@ class DB_CONNECT:
     @staticmethod
     def connect():
         try:
-            with pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=host.docker.internal,1433;DATABASE=TRN;UID=test;PWD=test;') as conn:
+            with pyodbc.connect('DRIVER={FreeTDS};SERVER=host.docker.internal,1433;DATABASE=TRN;UID=test;PWD=test;') as conn:
                 curs = conn.cursor()
 #             log.connected(server_name, db_name)
             return curs
